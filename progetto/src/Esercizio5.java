@@ -13,8 +13,8 @@ public class Esercizio5 {
         Scanner mioScanner=new Scanner(System.in);
 
         String password=mioScanner.nextLine();
-        String regex="^[a-zA-Z0-9$&!]{8}";
-
+       // String regex="^[a-zA-Z0-9$&!]{8}";
+        String regex="^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{4,8}$";
         boolean isValid=password.matches(regex);
         if(isValid){
             System.out.println("La password e' valida");
