@@ -23,16 +23,37 @@ package EsercizioPianeti;
    - Aggiungi le istanze alla lista di corpi celesti.*/
 public abstract class CorpoCeleste {
     private String nome;
+
+    private double massa;
+    private double diametro;
     private boolean tipo;
     private double distanzaDalSole;
 
     public CorpoCeleste() {
     }
 
-    public CorpoCeleste(String nome, boolean tipo, double distanzaDalSole) {
+    public CorpoCeleste(String nome, boolean tipo, double distanzaDalSole, double massa, double diametro) {
         this.nome = nome;
         this.tipo = tipo;
         this.distanzaDalSole = distanzaDalSole;
+        this.diametro=diametro;
+        this.massa=massa;
+    }
+
+    public double getMassa() {
+        return massa;
+    }
+
+    public void setMassa(double massa) {
+        this.massa = massa;
+    }
+
+    public double getDiametro() {
+        return diametro;
+    }
+
+    public void setDiametro(double diametro) {
+        this.diametro = diametro;
     }
 
     public String getNome() {

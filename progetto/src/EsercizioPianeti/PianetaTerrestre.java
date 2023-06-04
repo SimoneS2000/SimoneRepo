@@ -23,29 +23,21 @@ package EsercizioPianeti;
    - Crea almeno due istanze di pianeti, uno terrestre e uno gassoso.
    - Aggiungi le istanze alla lista di corpi celesti.*/
 public class PianetaTerrestre extends CorpoCeleste {
-    private double massa;
+
 
     public PianetaTerrestre() {
     }
 
-    public PianetaTerrestre(String nome, double distanzaDalSole, double massa) {
-        super(nome, false, distanzaDalSole);
-        this.massa = massa;
+    public PianetaTerrestre(String nome, double distanzaDalSole, double massa, double diametro) {
+        super(nome, false, distanzaDalSole, massa, diametro);
     }
 
-    public double getMassa() {
-        return massa;
-    }
-
-    public void setMassa(double massa) {
-        this.massa = massa;
-    }
     @Override
     public String toString() {
         StringBuilder sb=new StringBuilder();
-        sb.append(super.toString());
         sb.append(" { PianetaTerrestre[");
-        sb.append("massa: "+massa+"] }");
+        sb.append(super.toString());
+        sb.append("}");
         return sb.toString();
     }
 }
